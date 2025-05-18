@@ -35,8 +35,10 @@ body {
   --animate-move-out-2: moveOut2 1s ease-in-out infinite alternate;
   --animate-move-out-3: moveOut3 1s ease-in-out infinite alternate;
   --animate-move-out-4: moveOut4 1s ease-in-out infinite alternate;
-  --animate-second-counter: timeCounter 2s linear infinite;
+  --animate-second-counter: timeCounter 1s linear infinite;
   --animate-minute-counter: timeCounter 60s linear infinite;
+  --animate-text-caret: textCaret 0.5s step-end infinite;
+  --animate-type-effect: typeEffect 5s steps(12) infinite;
 }
 
 /* Wave Loader */
@@ -103,5 +105,27 @@ body {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes textCaret {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes typeEffect {
+  0% {
+    max-width: 0;
+  }
+  80% {
+    max-width: 12ch;
+  }
+  100% {
+    max-width: 12ch;
   }
 }
