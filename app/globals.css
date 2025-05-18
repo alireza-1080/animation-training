@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 :root {
   --background: #ffffff;
@@ -25,7 +25,21 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Wave Loader Start */
+@theme {
+  --animate-grow-1: grow 0.75s ease-in-out infinite alternate;
+  --animate-grow-2: grow 0.75s ease-in-out infinite alternate 0.3s;
+  --animate-grow-3: grow 0.75s ease-in-out infinite alternate 0.6s;
+  --animate-grow-4: grow 0.75s ease-in-out infinite alternate 0.9s;
+  --animate-grow-5: grow 0.75s ease-in-out infinite alternate 1.2s;
+  --animate-move-out-1: moveOut1 1s ease-in-out infinite alternate;
+  --animate-move-out-2: moveOut2 1s ease-in-out infinite alternate;
+  --animate-move-out-3: moveOut3 1s ease-in-out infinite alternate;
+  --animate-move-out-4: moveOut4 1s ease-in-out infinite alternate;
+  --animate-second-counter: timeCounter 2s linear infinite;
+  --animate-minute-counter: timeCounter 60s linear infinite;
+}
+
+/* Wave Loader */
 @keyframes grow {
   from {
     transform: scaleY(1);
@@ -37,24 +51,7 @@ body {
   }
 }
 
-.animate-grow-1 {
-  animation: grow 0.75s ease-in-out infinite alternate;
-}
-.animate-grow-2 {
-  animation: grow 0.75s ease-in-out infinite alternate 0.3s;
-}
-.animate-grow-3 {
-  animation: grow 1s ease-in-out infinite alternate 0.6s;
-}
-.animate-grow-4 {
-  animation: grow 1s ease-in-out infinite alternate 0.9s;
-}
-.animate-grow-5 {
-  animation: grow 1s ease-in-out infinite alternate 1.2s;
-}
-/* Wave Loader End */
-
-/* Center Square Loader Start */
+/* Center Square Loader */
 @keyframes moveOut1 {
   from {
     transform: translate(0, 0);
@@ -99,19 +96,12 @@ body {
   }
 }
 
-.animate-move-out-1 {
-  animation: moveOut1 1s ease-in-out infinite alternate;
+/* Clock Spinner Start */
+@keyframes timeCounter {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
-
-.animate-move-out-2 {
-  animation: moveOut2 1s ease-in-out infinite alternate;
-}
-
-.animate-move-out-3 {
-  animation: moveOut3 1s ease-in-out infinite alternate;
-}
-
-.animate-move-out-4 {
-  animation: moveOut4 1s ease-in-out infinite alternate;
-}
-/* Center Square Loader End */
